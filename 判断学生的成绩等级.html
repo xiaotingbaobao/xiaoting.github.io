@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>判断学生的成绩等级</title>
+			<script>
+		window.onload=function()
+		{
+			var oBtn=document.getElementById('btn');
+			var oBtn1=document.getElementById('btn1');
+			
+			
+			oBtn1.onclick=function()
+			{
+				
+				var v=oBtn.value;
+				if(v>=90 && v<=100)
+				{
+					alert('优秀');
+				}else if(v>=80 && v<=89){
+					alert('良好');
+				}else if(v>=70 && v<=79){
+					alert('中等');
+				}else if(v>=60 && v<=69){
+					alert('合格');
+				}else if(v>=0 && v<=59){
+					alert('不合格');
+				}else{
+					alert('请输入有效成绩');
+				}
+			}
+		}
+		
+
+	</script>
+	</head>
+	<body>
+		<input type="text" id="btn" value=""/>
+		<input type="button" id="btn1" value="查看等级" />
+	</body>
+</html>
