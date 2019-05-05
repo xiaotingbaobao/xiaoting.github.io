@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>风车动画</title>
+		<style>
+			.fengche{
+				width: 800px;
+				height: 800px;
+				margin-top: 100px;
+				margin-left: 200px;
+				 
+			}
+			
+			.box-one{
+				border-top:100px solid transparent;
+				border-right: 100px solid transparent;
+				border-bottom: 100px solid red;
+				border-left: 100px solid red;
+				position: absolute;
+				margin-top: 30px;
+				transform: rotate(45deg);
+				transform-origin:right bottom;
+				animation:run 2s linear infinite;
+				
+			}
+			.box-two{
+				border-top:100px solid yellow;
+				border-right: 100px solid transparent;
+				border-bottom: 100px solid transparent;
+				border-left: 100px solid yellow;
+				position: absolute;
+				margin-left: 200px;
+				margin-top: 30px;
+				transform: rotate(45deg);
+				transform-origin:left bottom;
+				animation:run 2s linear infinite;
+			}
+			.box-three{
+				border-top:100px solid pink;
+				border-right: 100px solid pink;
+				border-bottom: 100px solid transparent;
+				border-left: 100px solid transparent;
+				position: absolute;
+				margin-left: 200px;
+				margin-top: 230px;
+				transform: rotate(45deg);
+				transform-origin:top left;
+				animation:run 2s linear infinite;
+			}
+			.box-four{
+				border-top:100px solid transparent;
+				border-right: 100px solid cyan;
+				border-bottom: 100px solid cyan;
+				border-left: 100px solid transparent;
+				position: absolute;
+				margin-top: 230px;
+				transform: rotate(45deg);
+				transform-origin:right top;
+				animation:run 2s linear infinite;
+
+			}
+			@keyframes run{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+				}
+				@-webkit-keyframes run{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			
+			
+			.yuan{
+				position: absolute;
+				width:60px;
+				height:60px;
+				background:green;
+      			border-radius:25px;
+      			left:380px;
+				top:300px;
+			}
+			.ganzi{
+				position: absolute;
+				width: 20px;
+				height: 410px;
+				top: 300px;
+				left: 400px;
+				background-color: #A94442;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fengche">
+			<div class="box-one"></div>
+			<div class="box-two"></div>
+			<div class="box-three"></div>
+			<div class="box-four"></div>
+		</div>
+		<div class="yuan"></div>
+		<div class="ganzi"></div>
+	</body>
+</html>
