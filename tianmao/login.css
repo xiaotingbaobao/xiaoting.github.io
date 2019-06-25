@@ -1,0 +1,274 @@
+body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input{ margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+ol,ul{ list-style:none;}
+/*头部*/
+.wp{
+    width: 1190px;
+    margin: 0 auto;
+}
+.header{
+	padding: 22px 0px;
+    height: 44px;
+    margin: auto;
+    margin: 0;
+}
+.header img{
+	width: 190px;
+	margin-top: 10px;
+}
+.content{
+	background-color: rgb(102, 4, 167);
+	
+	width: 100%;
+	height: 600px;
+	margin-bottom: 40px;
+}
+.content_detail{
+	height: 600px;
+	background-image: url(img/denglu_zhu.jpg);
+	background-size: 1190px 600px;
+	position: relative;
+}
+.content_denglu{
+	position: absolute;
+	width: 298px;
+	height: 355px;
+	background-color: #ffffff;
+	padding: 25px 26px 20px;
+	right: 70px;
+	top: 85px;
+}
+
+.denglu_text{
+	position: absolute;
+	top: 15px;
+	left: 130px;
+	margin-top: 20px;
+	height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #3c3c3c;
+    padding-bottom: 8px; 
+    font-weight: 700;
+}
+.denglu_tishi{
+	position: absolute;
+	top: 25px;
+	line-height: 16px;
+    padding: 6px 10px;
+    overflow: hidden;
+    width: 278px;
+    background: #fef2f2;
+    display: none;
+}
+.denglu_tishi img{
+	padding-right: 10px;
+	float: left;
+}
+.denglu_tishi p{
+	float: left;
+	width: 240px;
+	color: #6c6c6c;
+	font-size: 14px;
+}
+.denglu_admin{
+	margin-top: 45px;
+	height: 40px;
+	position: relative;
+}
+.admin_z{
+	display: block;
+	width: 40px;
+	height: 40px;
+    line-height: 40px;
+    background: #ddd;
+    text-align: center;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    outline: 0;
+}
+.admin_z img{
+	width: 25px;
+	height: 25px;
+	margin-top: 7px;
+}
+.denglu_admin input{
+    width: 240px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    padding: 11px 8px 11px 50px;
+    border: 1px solid #ddd;
+}
+
+.denglu_password{
+	margin-top: 25px;
+	height: 40px;
+	position: relative;
+}
+.password_z{
+	display: block;
+	width: 40px;
+	height: 40px;
+    line-height: 40px;
+    background: #ddd;
+    text-align: center;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    outline: 0;
+}
+.password_z img{
+	width: 25px;
+	height: 25px;
+	margin-top: 7px;
+}
+.denglu_password input{
+    width: 240px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    padding: 11px 8px 11px 50px;
+    border: 1px solid #ddd;
+}
+.denglu_deng{
+	margin-top: 20px;
+}
+.submit{
+	width: 300px;
+    height: 42px;
+    border: 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #ff0036;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.denglu_footer{
+	margin-top: 25px;
+	margin-left: 100px;
+}
+.denglu_footer a{
+	margin-right: 10px;
+	text-decoration: none;
+	color: #6c6c6c;
+    font-size: 8px;
+    text-align: right;
+}
+.denglu_footer a:hover{
+	color: #ff0036;
+}
+/*底部*/
+.footer{
+    width: 100%;
+    height: 219px;
+    background-color: #ffffff;
+}
+.footer_hei a{
+    text-decoration: none;
+}
+.footer_hei1{
+    width: 100%;
+    height: 33px;
+}
+.footer_hei1 a{
+    color: #000;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 3px;
+    height: 33px;
+    line-height: 33px;
+    text-decoration: none;
+}
+.footer_hei2{
+    width: 100%;
+    height: 40px;
+}
+.footer_hei2 a{
+    color: #000;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 3px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+}
+.footer_hei3{
+    width: 100%;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.footer_hei3 a{
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+.footer_hei31{
+    margin-right: 64px;
+    float: left;
+}
+.footer_hei32{
+    margin-right: 70px;
+    float: left;
+}
+.footer_hei33{
+    margin-right: 70px;
+    float: left;
+}
+.footer_hei34{
+    float: left;
+    color: #666;
+}
+.footer_hei4{
+    width: 100%;
+    height: 28px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    line-height: 28px;
+}
+.footer_hei41{
+    margin-right: 64px;
+    float: left;
+}
+.footer_hei42{
+    margin-right: 70px;
+    float: left;
+}
+.footer_hei43 img{
+    margin-top: 3px;
+    margin-right: 3px;
+    float: left;
+}
+.footer_hei5{
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    line-height: 20px;
+}
+.footer_hei6{
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    line-height: 20px;
+}
+.footer_hei7{
+    width: 100%;
+    height: 62px;
+}
+.footer_hei7 img{
+    margin-right: 14px;
+    margin-top: 7px;
+}
