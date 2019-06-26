@@ -1,4 +1,4 @@
-# https://xiaotingzi.shop/personal-resume/
+# https://xiaotingzi.shop/personal resume/
 personal-resume: 网页简历
 bootstrap：使用bootstrap做出的网站
 game-mine sweeping：扫雷小游戏
