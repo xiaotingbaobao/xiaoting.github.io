@@ -24,6 +24,11 @@
 	text-align: center;
 	line-height: 88upx;
 }
+.xempty{
+	width: 100%;
+	height: 20upx;
+	
+}
 .xguild{
 		width: 100%;
 		background-color: #ffffff;
