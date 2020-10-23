@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title class="title">[文件管理器]</title>
+		<!-- <script type="text/javascript" src="jquery.js "></script>
+		<script type="text/javascript" src="jszip.js"></script>
+		<script type="text/javascript" src="jszip_utils.js"></script>
+		<script type="text/javascript" src="FileSaver.js"></script> -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			/* .content {position: fixed;left: 0;bottom: 0; width: 100%;height: 106px;background: #000000;margin-top: calc(100% - 106px);} */
+			/* .fixed {position: fixed;bottom: 0;left: 0;right: 0;width: 100%;} */
+			/* .content .mask {top: 0;background: rgba(0,0,0,.4);z-index: 90;} */
+			.content .file-content {z-index: 1;background: transparent;position: fixed;right: 0;top: 0; width: 50px;height: 50px;}
+			.btn {position: relative;width: 100%;height: 100%;background: transparent;}
+			.btn .file {position: absolute;z-index: 3;left: 0;right: 0;top: 20px;bottom: 0;height: 30px;width: 100%;opacity: 0;}
+			.btn-bg {background:transparent; width: 50px;height: 50px; overflow: hidden;border: none;} 
+			.btn-bg .bimg{
+				width: 30px;
+				height: 30px;
+				/* margin-top: 10px; */
+				/* margin-left: 5px; */
+			}
+			.tis {top: 0;z-index: 5;display: none;justify-content: center;align-items: center;}
+			.tis .tis-content {background: #fff;width: 60%;border-radius: 10px;position: absolute;z-index: 3;left: 0;bottom: 400px;display: none;}
+			.tis .tis-content img {width: 50px;height: 50px;}
+			.tis-progress {margin: 10px 0;color: #999;}
+			.cancel-btn {margin-top: 30px;height: 30px;line-height: 1;padding: 0 2em;background: #e3e3e3;color: #898989;border: 0;border-radius: 5px;}
+		</style>
+		
+		<!-- <script  type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> -->
+		<!-- <script  type="text/javascript"  src="jquery-3.5.1.js"></script> -->
+		<!-- <script  type="text/javascript"  src="jquery.js"></script> -->
+	</head>
+	
+	
+	<body>
+		<div class="content">
+			<div class="fixed mask"></div>
+			<div align="center" class="fixed tis">
+				<div class="tis-content">
+					<div>
+						<img src="../../static/img/logoone1.png" >
+					</div>
+					<div class="tis-progress">
+						努力上传中..
+					</div>
+					<div class="cancel">
+						<button type="button" class="cancel-btn">取消上传</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="fixed file-content">
+				<div class="btn">
+					<button type="button"  class="btn-bg" >
+						<image class="bimg" src="../../static/img/upload-fff.png"></image> 
+					</button>
+					<input class="file" id="file" type="file" multiple />
+				</div>
+			</div>
+		</div> 
+		
+		
+		<!-- <script type="text/javascript">
+		    $(function () {
+		 
+		 //        //使用jquery-ui的dialog，实现主线程挂起模拟
+		 //        $("#dialog").dialog({
+		 //            //隐藏对话框
+		 //            autoOpen: false,
+		 //            //禁止使用esc关闭对话框
+		 //            closeOnEscape: false,
+		 //            title: "数据处理中，请稍等......",
+		 //            //突出对话框，主页面变暗
+		 //            modal: true,
+		 //            //禁止右上角默认的关闭按钮
+		 //            open: function (event, ui) {
+		 //                $(".ui-dialog-titlebar-close", $(this).parent()).hide();
+		 //            }
+		 //        });
+		 
+		        //上传后自动压缩，async和await配合使用，实现同步效果
+		        $("#file").change(async function () {
+		 
+		            //打开对话框，主界面被锁定
+		            // $("#dialog").dialog("open");
+		            //获取上传文件
+		            const files = event.target.files
+		            //创建jszip对象
+		            var zip = new JSZip();
+		            //创建filereader对象
+		            const reader = new FileReader()
+		 
+		            //创建返回给await的promise对象
+		            const readFileAsync = file => new Promise(resolve => {
+		                //filereader对象的回调函数，在回调函数中，把读取的file对象添加到jszip对象中
+		                reader.onload = () => {
+		                    zip.file(file.name, file, { binary: true })
+		                    resolve()
+		                }
+		                //读取对象
+		                reader.readAsBinaryString(file)
+		            })
+		 
+		            //使用await实现同步效果，等待promise返回，再进入下一个循环
+		            for (let i = 0; i < files.length; i++) {
+		                await readFileAsync(files[i])
+		            }
+		 
+		            event.target.value = null
+		 
+		            //jszip对象设置压缩参数
+		            zip.generateAsync({
+		                //压缩类型
+		                type: "blob",
+		            })
+		 
+		                .then(function (content) {
+		                    //使用filesaver将压缩文件存回本地
+		                    saveAs(content, "zip.zip");
+		                    //关闭对话框，解除主界面锁定
+		                    // $("#dialog").dialog("close");
+		                });
+		        });
+		    });
+		</script> -->
+		
+		
+		
+		<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+		<script src="js/h5-uploader.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
